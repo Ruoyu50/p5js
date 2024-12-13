@@ -1,2 +1,0 @@
-The project came a long way, I spent a lot of time discovering the p5js editor and learned more about the javascript language.
-I also tried to run it locally, but unfortunately I couldn't get it running, that's also when I realized how convenient p5js online editor is and how hard it would be to type codes locally from 0.

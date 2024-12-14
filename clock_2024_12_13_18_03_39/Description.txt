@@ -1,0 +1,5 @@
+I made a clock that allows users to change regions where they belong.
+
+red and cyan are two colors I like very much. These two colors can create glow effect that is very eye-catching.
+
+The reason I chose the background is just to emphasis the glowing clock.

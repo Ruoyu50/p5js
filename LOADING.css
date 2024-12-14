@@ -1,0 +1,36 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+
+
+html, body {
+  background: #000000;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 6px;
+  overflow: hidden;
+}
+
+.water-fill {
+  animation: wave 0.7s infinite linear, 
+             fill-up 10s infinite ease-out alternate;
+}
+
+@keyframes wave {
+  0% { x: -400px; }
+  100% { x: 0; }
+}
+
+
+@keyframes fill-up {
+  0% {
+    height: 0;
+    y: 130px;
+  }
+  100% {
+    height: 160px;
+    y: -30px;
+  }
+}

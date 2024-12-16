@@ -1,1 +1,0 @@
-Small tests for me to figuring out how && works.

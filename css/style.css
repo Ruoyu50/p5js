@@ -1,0 +1,322 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&diasply=swap'); */
+/*引用谷歌字体*/
+@import './google-font.css';
+*
+{
+/*    border: 1px solid blue;*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+  min-height: 100vh;
+    font-family: sans-serif;
+color: #555;
+font-size: 1.4em;
+    background: linear-gradient(to right, rgb(255, 127, 127), rgb(153, 224, 255) 50%);
+}
+
+
+/*
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: rgb(153, 224, 255);
+}
+
+a:hover{
+    color: white;
+}
+*/
+
+header
+{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height:80px;
+  background-color: #fff;
+      font-family: 'Poppins', sans-serif;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.logo
+{
+  color: #333;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.group
+{
+  display: flex;
+  align-items: center;
+}
+
+header ul
+{
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+header ul li
+{
+  list-style: none;
+}
+
+header ul li a
+{
+  position: relative;
+  text-decoration: none;
+  font-size: 1em;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+header ul li a::before
+{
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+}
+
+header ul li a:hover::before
+{
+  transform: scale(1);
+  transform-origin: left;
+}
+
+header .search
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.searchBox
+{
+  position: fixed;
+  right: -100%;
+  width: 100%;
+  height: 0%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  padding: 0 30px;
+  transition: 0.5s ease-in-out;
+}
+.searchBox.active{
+  right: 0;
+}
+.searchBox input
+{
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 50px;
+  font-size: 1.25em;
+  background-color: #fff;
+  color: #333;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.searchBtn
+{
+  position: relative;
+  left: 30px;
+  top:2.5px;
+  transition: 0.5s ease-in-out;
+}
+.searchBtn.active
+{
+ left: 0;
+}
+
+.closeBtn
+{
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+}
+.closeBtn.active{
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+  transform: scale(1);
+}
+
+.menuToggle{
+  position: relative;
+  display: none;
+}
+.menuToggle.hide{
+  display: none;
+}
+@media (max-width: 800px)
+{
+  .searchBtn
+  {
+    left: 0;
+  }
+  .menuToggle
+  {
+    position: absolute;
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
+    transform: translateX(30px);
+    z-index: 10;
+  }
+  header .navigation
+  {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    left: 100%;
+  }
+
+  header.open .navigation
+  {
+    opacity: 1;
+    visibility: visible;
+    top:80px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: calc(100vh - 80px);
+    padding: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  header.open .navigation li a
+  {
+    font-size: 1.25em;
+  }
+}
+
+        main{
+        margin: 80px auto 0px;
+/*        border: 3px solid red;*/
+    }
+
+
+
+
+
+/* From Uiverse.io by SteveBloX */ 
+#card {
+/*    border: 2px solid red;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 默认四列 */
+    gap: 16px;
+}
+
+.card {
+    position: relative;  /* 使得内部元素可以根据 z-index 控制层级 */
+    box-sizing: border-box;
+    height: 300px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    color: black;
+        overflow: hidden; /* 隐藏溢出的部分 */
+}
+
+
+#01, #02, #03, #04, #05, #06, #07 {
+width: 100%; /* 设置 canvas 的宽度为 100% */
+    height: 100%; /* 设置 canvas 的高度为 100% */
+}
+
+.project-link {
+    position: absolute; /* 绝对定位 */
+    top: 50%; /* 垂直居中 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-50%, -50%); /* 完全居中 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    color: white; /* 白色文字 */
+    padding: 10px 20px; /* 内边距 */
+    text-decoration: none; /* 去掉默认的下划线 */
+    border-radius: 5px; /* 圆角 */
+    font-size: 16px; /* 字体大小 */
+    transition: background-color 0.3s; /* 背景色过渡效果 */
+}
+
+.project-link:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* 悬停时背景色变暗 */
+}
+
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+section#card img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* 媒体查询：当屏幕宽度小于800px时，调整为两列 */
+@media (max-width: 800px) {
+    #card {
+        grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+    }
+}
+
+/* 媒体查询：当屏幕宽度小于500px时，调整为单列 */
+@media (max-width: 500px) {
+    #card {
+        grid-template-columns: 1fr; /* 单列布局 */
+    }
+}
+

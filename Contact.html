@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
+    <script src="https://unpkg.com/intersection-observer"></script>
+    <link rel="stylesheet" href="css/Contact.css">
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo">ruoyu</a>
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="loading.html?next=index.html" id="toPageB">Home</a></li>
+                <li><a href="loading.html?next=About.html">About</a></li>
+                <!--        <li><a href="#">Services</a></li>-->
+<!--                <li><a href="#">Blog</a></li>-->
+                <li><a href="#" id="toPageB">Contact</a></li>
+            </ul>
+            <div class="search">
+                <span class="icon">
+                    <ion-icon name="search-outline" class="searchBtn"></ion-icon>
+                </span>
+                <span class="icon">
+                    <ion-icon name="close-outline" class="closeBtn"></ion-icon>
+                </span>
+            </div>
+            <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
+        </div>
+        <div class="searchBox">
+            <input type="text" placeholder="Search here...">
+        </div>
+    </header>
+
+    <main>
+     <section id="contact-info">
+        <ul>
+            <li><strong>Name: </strong>Ruoyu Shi</li>
+            <li><strong>Email: </strong><a href="mailto:ssssmess@foxmail.com">ssssmess@foxmail.com</a></li>
+            <li><strong>Phone: </strong>xxx-xxx-xxxx</li>
+            <li><strong>Instgram: </strong><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><strong>LinkedIn：</strong><a href="https://www.linkedin.com" target="_blank">LinkedIn Profile</a></li>
+        </ul>
+    </section>
+
+    <section id="contact-form">
+        <h2>Message</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Content: </label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    
+            </main>
+            <footer>
+        <p>© 2024 Ruoyu Shi. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/script.js"></script>
+     <script>
+    // 定义按钮的跳转逻辑
+    function navigateTo(targetPage) {
+      window.location.href = `loading.html?next=${targetPage}`;
+    }
+  </script>
+
+</body>
+
+</html>

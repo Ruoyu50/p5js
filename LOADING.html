@@ -31,17 +31,20 @@
   
   
  <script>
-    const params = new URLSearchParams(window.location.search);
-    const nextPage = params.get("next");
+  // 获取 URL 中的参数
+  const params = new URLSearchParams(window.location.search);
+  const nextPage = params.get("next");
 
-    setTimeout(() => {
-      if (nextPage) {
-        window.location.href = nextPage; // 跳转到目标页面
-      } else {
-        alert("目标页面未指定！");
-      }
-    }, 2000); // 延迟 2 秒后跳转
-  </script>
+  // 延迟 2 秒后跳转
+  setTimeout(() => {
+    if (nextPage) {
+      window.location.replace(nextPage);  // 使用 window.location.replace 来替代
+    } else {
+      alert("目标页面未指定！");
+    }
+  }, 2000); // 延迟 2 秒后跳转
+</script>
+
   
   
   
